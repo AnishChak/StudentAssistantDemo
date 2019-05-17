@@ -7,22 +7,24 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 //import com.example.test.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import assistant.genuinecoder.s_assistant.main.database.DatabaseHandler;
+
 public class LaunchActivity extends AppCompatActivity {
 
     private Spinner spinner;
+    public static DatabaseHandler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
-
+        handler = new DatabaseHandler(this);
         spinner = findViewById(R.id.spinner);
 
         List<String> categories = new ArrayList<>();
@@ -59,7 +61,7 @@ public class LaunchActivity extends AppCompatActivity {
                     if(parent.getItemAtPosition(position).equals("Teacher"))
                     {
 
-                        Intent intent = new Intent(LaunchActivity.this,TeacherReg.class);
+                        Intent intent = new Intent(LaunchActivity.this,TeacherLogin.class);
                         startActivity(intent);
                     }
                     //anything else you want to do on item selection do here

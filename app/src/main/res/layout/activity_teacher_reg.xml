@@ -17,42 +17,50 @@
         android:elevation="5dp"
         android:layout_height="match_parent">
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/spinner"
-            android:textSize="20sp"
-            android:paddingBottom="5dp" />
+        <!--<Spinner-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:id="@+id/spinner"-->
+            <!--android:textSize="20sp"-->
+            <!--android:paddingBottom="5dp" />-->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/edit_name"
+            android:id="@+id/edit_t_name"
             android:hint="Name"
             android:textSize="20sp"
             android:paddingBottom="5dp" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/roll"
+            android:id="@+id/t_id"
             android:inputType="numberDecimal"
-            android:hint="Roll Number"
+            android:hint="Teacher ID"
             android:textSize="20sp"
             android:paddingBottom="5dp" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/register"
-            android:hint="Admission Number"
+            android:id="@+id/t_dept"
+            android:hint="Department"
             android:textSize="20sp"
             android:paddingBottom="5dp" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/contact"
+            android:id="@+id/t_contact"
             android:inputType="phone"
             android:hint="Contact"
             android:textSize="20sp"
             android:paddingBottom="5dp" />
+
+        <EditText
+            android:id="@+id/treg_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Password"/>
 
         <Button
             android:layout_width="200dp"
@@ -63,7 +71,8 @@
             android:textStyle="bold"
             android:textSize="16dp"
             android:background="@color/colorPrimary"
-            android:id="@+id/buttonSAVE"
+            android:id="@+id/buttonTReg"
             android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 </RelativeLayout>

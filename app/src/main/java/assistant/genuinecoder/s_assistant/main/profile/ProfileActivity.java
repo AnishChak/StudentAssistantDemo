@@ -78,7 +78,7 @@ public class ProfileActivity extends AppCompatActivity {
                             String qa = "DELETE FROM ATTENDANCE WHERE register = '" + regno.toUpperCase() + "'";
                             if (AppBase.handler.execAction(qa)) {
                                 Toast.makeText(getBaseContext(), "Deleted", Toast.LENGTH_LONG).show();
-                                Log.d("delete", "done from attendance");
+                                Log.d("delete", "done from genuinecoder");
                             }
                         }
                     }

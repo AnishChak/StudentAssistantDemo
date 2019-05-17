@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import assistant.genuinecoder.s_assistant.R;
 import assistant.genuinecoder.s_assistant.main.AppBase;
-import assistant.genuinecoder.s_assistant.main.components.AppCompatPreferenceActivity;
 
 public class SettingsActivity extends AppCompatPreferenceActivity {
     Activity base = this;
@@ -56,7 +55,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             public boolean onPreferenceClick(Preference preference) {
                 final AlertDialog.Builder alert = new AlertDialog.Builder(base);
                 alert.setTitle("Are you sure ?");
-                alert.setMessage("This will wipe your entire attendance data");
+                alert.setMessage("This will wipe your entire genuinecoder data");
                 alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

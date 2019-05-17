@@ -7,7 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -44,21 +50,38 @@ public class AppBase extends AppCompatActivity {
 
         getSupportActionBar().show();
         divisions = new ArrayList<>();
-        divisions.add("S1 COMPUTER SCIENCE");
-        divisions.add("S2 COMPUTER SCIENCE");
-        divisions.add("S3 COMPUTER SCIENCE");
-        divisions.add("S4 COMPUTER SCIENCE");
-        divisions.add("S5 COMPUTER SCIENCE");
-        divisions.add("S6 COMPUTER SCIENCE");
-        divisions.add("S7 COMPUTER SCIENCE");
+        divisions.add("DBMS");
+        divisions.add("Operating System");
+        divisions.add("Computer Networking");
+        divisions.add("Data Analysis and Algorithms");
+        divisions.add("Discreet Mathematics");
+//        divisions.add("S6 COMPUTER SCIENCE");
+//        divisions.add("S7 COMPUTER SCIENCE");
         gridView = (GridView) findViewById(R.id.grid);
         basicFields.add("ATTENDANCE");
         basicFields.add("SCHEDULER");
-        //basicFields.add("NOTES");
+//        basicFields.add("NOTES");
         basicFields.add("PROFILE");
-        basicFields.add("CGPA CALCULATOR");
+//        basicFields.add("CGPA CALCULATOR");
         adapter = new GridAdapter(this, basicFields);
         gridView.setAdapter(adapter);
+
+        Intent intent = getIntent();
+        String name = intent.getExtras().getString("name");
+        String id = intent.getExtras().getString("id");
+        TextView tn = (TextView)findViewById(R.id.display_tname);
+        TextView tid = (TextView)findViewById(R.id.display_tid);
+        tn.setText(name);
+        tid.setText(id);
+
+        Button btn = (Button)findViewById(R.id.btn_tlogout);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     public void loadSettings(MenuItem item) {

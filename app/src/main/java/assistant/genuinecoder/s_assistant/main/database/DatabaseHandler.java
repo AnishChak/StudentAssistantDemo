@@ -35,6 +35,14 @@ public class DatabaseHandler {
         }
 
         try {
+            String qu = "CREATE TABLE IF NOT EXISTS TEACHER(name varchar(100) not null," +
+                    "teacher_id varchar(100) primary key, dept varchar(1000), contact varchar(1000), password varchar(1000));";
+            database.execSQL(qu);
+        } catch (Exception e) {
+            Toast.makeText(activity, "Error Occured for create table", Toast.LENGTH_LONG).show();
+        }
+
+        try {
             String qu = "CREATE TABLE IF NOT EXISTS NOTES(title varchar(100) not null," +
                     "body varchar(10000), cls varchar(1000), sub varchar(1000) ,datex TIMESTAMP default CURRENT_TIMESTAMP);";
             database.execSQL(qu);

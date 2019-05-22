@@ -50,18 +50,22 @@ public class TeacherLogin extends AppCompatActivity {
         else if(cursor!=null)
         {
             int index;
-            String n,id;
+            String n,id,email;
             cursor.moveToFirst();
             //index =cursor.getColumnIndex(1);
            id = cursor.getString(1);
 //            index = cursor.getColumnIndex("name");
             n = cursor.getString(0);
+            email = cursor.getString(3);
 
             Toast.makeText(getBaseContext(),"Login Success " + n,Toast.LENGTH_SHORT).show();
 
+            tid.setText("");
+            pass.setText("");
             Intent intent = new Intent(TeacherLogin.this, AppBase.class);
             intent.putExtra("name",n);
             intent.putExtra("id",id);
+            intent.putExtra("email",email);
             startActivity(intent);
         }
 

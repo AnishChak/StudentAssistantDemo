@@ -17,17 +17,25 @@ public class DatabaseHandler {
     }
 
     public void createTable() {
+//        try {
+//            String qu = "CREATE TABLE IF NOT EXISTS STUDENT(name varchar(1000)," +
+//                    "cl varchar(100), " +
+//                    "regno varchar(100) primary key, contact varchar(100),roll integer);";
+//            database.execSQL(qu);
+//        } catch (Exception e) {
+//            Toast.makeText(activity, "Error Occured for create table", Toast.LENGTH_LONG).show();
+//        }
         try {
             String qu = "CREATE TABLE IF NOT EXISTS STUDENT(name varchar(1000)," +
-                    "cl varchar(100), " +
-                    "regno varchar(100) primary key, contact varchar(100),roll integer);";
+                    "sid varchar(100) primary key, " +
+                    "email varchar(100), password varchar(100));";
             database.execSQL(qu);
         } catch (Exception e) {
             Toast.makeText(activity, "Error Occured for create table", Toast.LENGTH_LONG).show();
         }
         try {
             String qu = "CREATE TABLE IF NOT EXISTS ATTENDANCE(datex date," +
-                    "hour int, " +
+                    "hour int, " + "sub varchar(100)," +
                     "register varchar(100) ,isPresent boolean);";
             database.execSQL(qu);
         } catch (Exception e) {
@@ -52,7 +60,7 @@ public class DatabaseHandler {
 
         try {
             String qu = "CREATE TABLE IF NOT EXISTS SCHEDULE(cl varchar(100),subject varchar(1000)," +
-                    "timex time, day_week varchar(100));";
+                    "timex time, day_week varchar(100),teacher_id varchar(100) references TEACHER);";
             database.execSQL(qu);
         } catch (Exception e) {
             Toast.makeText(activity, "Error Occured for create table", Toast.LENGTH_LONG).show();

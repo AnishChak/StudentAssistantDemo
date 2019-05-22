@@ -49,12 +49,12 @@ public class TeacherReg extends AppCompatActivity {
     public void saveToDatabase(View view) {
         EditText name = (EditText) findViewById(R.id.edit_t_name);
         EditText t_id = (EditText) findViewById(R.id.t_id);
-        EditText dept = (EditText) findViewById(R.id.t_dept);
+        //EditText dept = (EditText) findViewById(R.id.t_dept);
         EditText contact = (EditText) findViewById(R.id.t_contact);
         EditText pass = (EditText) findViewById(R.id.treg_password);
         //String classSelected = spinner.getSelectedItem().toString();
 
-        if (name.getText().length() < 2 || dept.getText().length() == 0 || t_id.getText().length() < 2 ||
+        if (name.getText().length() < 2 || t_id.getText().length() < 2 ||
                 contact.getText().length() < 2) {
             AlertDialog.Builder alert = new AlertDialog.Builder(activity);
             alert.setTitle("Invalid");

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">S-Assistant</string>
+    <string name="app_name">The Attendance App</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_settings">Settings</string>
 

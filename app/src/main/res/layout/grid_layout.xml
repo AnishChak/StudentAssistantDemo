@@ -10,8 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@android:color/transparent"
         android:id="@+id/imageHolder"
-        android:src="@drawable/ic_notes"
+
         />
     <TextView
         android:layout_width="match_parent"

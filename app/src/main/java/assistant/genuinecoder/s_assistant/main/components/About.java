@@ -43,7 +43,7 @@ public class About extends AppCompatActivity {
 
         int yDest = dm.heightPixels / 2 - (view.getMeasuredHeight() / 2) - statusBarOffset;
 
-        anim1 = new TranslateAnimation(0, 0, 0, yDest - originalPos[1] + 250);
+        anim1 = new TranslateAnimation(0, 0, 0, yDest - originalPos[1] + 600);
         anim1.setDuration(1500);
         anim1.setFillAfter(true);
         view.startAnimation(anim1);

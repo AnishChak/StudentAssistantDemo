@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,8 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_activity);
-
+        RelativeLayout rl =(RelativeLayout)findViewById(R.id.rlres);
+        rl.setBackgroundResource(R.drawable.stud_bg);
         EditText sgpa, percentage;
 
         sgpa = (EditText) findViewById(R.id.sgpa);

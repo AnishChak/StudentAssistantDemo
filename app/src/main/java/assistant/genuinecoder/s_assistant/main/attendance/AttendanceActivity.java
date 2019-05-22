@@ -20,7 +20,7 @@ import assistant.genuinecoder.s_assistant.main.components.ListAdapter;
 
 public class AttendanceActivity extends AppCompatActivity {
 
-    public static String time, period;
+    public static String time, period,sub;
     ListView listView;
     ListAdapter adapter;
     ArrayAdapter<String> adapterSpinner;
@@ -66,13 +66,15 @@ public class AttendanceActivity extends AppCompatActivity {
         assert spinner != null;
         spinner.setAdapter(adapterSpinner);
 
+
     }
 
     public void loadListView(View view) {
         names.clear();
         registers.clear();
-        String qu = "SELECT * FROM STUDENT WHERE cl = '" + spinner.getSelectedItem().toString() + "' " +
-                "ORDER BY ROLL";
+        sub = spinner.getSelectedItem().toString();
+        String qu = "SELECT * FROM STUDENT " +
+                "ORDER BY SID";
         Cursor cursor = AppBase.handler.execQuery(qu);
         if (cursor == null || cursor.getCount() == 0) {
             Log.e("Attendance", "Null cursor");
@@ -80,8 +82,8 @@ public class AttendanceActivity extends AppCompatActivity {
             int ctr = 0;
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                names.add(cursor.getString(0) + " (" + cursor.getInt(4) + ')');
-                registers.add(cursor.getString(2));
+                names.add(cursor.getString(0));// + " (" + cursor.getInt(4) + ')');
+                registers.add(cursor.getString(1));
                 cursor.moveToNext();
                 ctr++;
             }

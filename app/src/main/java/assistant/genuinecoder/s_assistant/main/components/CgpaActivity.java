@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import assistant.genuinecoder.s_assistant.R;
@@ -14,13 +15,15 @@ public class CgpaActivity extends AppCompatActivity {
 
     EditText c1, c2, c3, c4, c5, c6, c7;
     Button b3;
-    float sg1, sg2, sg3, sg4, sg5, sg6, sg7, cg;
+    float sg1, sg2, sg3, sg4, sg5, sg6, sg7, cg,per;
     int g1 = 44, g2 = 28, g3 = 28, g4 = 28, g5 = 28, g6 = 28, g7 = 28;
-
+    RelativeLayout rl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cgpa);
+        rl = (RelativeLayout)findViewById(R.id.rlcgpa);
+        rl.setBackgroundResource(R.drawable.stud_bg);
         c1 = findViewById(R.id.c1);
         c2 = findViewById(R.id.c2);
         c3 = findViewById(R.id.c3);
@@ -66,6 +69,7 @@ public class CgpaActivity extends AppCompatActivity {
 
 
                 cg = ((sg1 * g1) + (sg2 * g2) + (sg3 * g3) + (sg4 * g4) + (sg5 * g5) + (sg6 * g6) + (sg7 * g7)) / (g1 + g2 + g3 + g4 + g5 + g6 + g7);
+                per = (cg-0.75f)*10.0f;
                 if (sg1 == 0 && sg2 == 0 && sg3 == 0 && sg4 == 0 && sg5 == 0 && sg6 == 0 && sg7 == 0)
                     Toast.makeText(getApplicationContext(), "Insufficient Data ", Toast.LENGTH_LONG).show();
 
@@ -75,8 +79,8 @@ public class CgpaActivity extends AppCompatActivity {
 
                     Intent i3 = new Intent(getApplicationContext(), ResultActivity.class);
                     i3.putExtra("final_sgpa", cg);
-                    i3.putExtra("flag", 0);
-                    i3.putExtra("final_perc", 0);
+                    i3.putExtra("flag", 1);
+                    i3.putExtra("final_perc", per);
                     startActivity(i3);
 
                 }

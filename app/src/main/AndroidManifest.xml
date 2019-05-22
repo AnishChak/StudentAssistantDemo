@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StudLogin"></activity>
+        <activity android:name=".SAttendance"></activity>
+        <activity android:name=".SAppBase" />
+        <activity android:name=".StudLogin" />
         <activity android:name=".StudReg" />
         <activity android:name=".TeacherLogin" />
         <activity android:name=".TeacherReg" />

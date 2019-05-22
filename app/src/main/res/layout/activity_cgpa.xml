@@ -10,7 +10,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff">
+        android:background="#ffffff"
+        android:id="@+id/rlcgpa">
 
         <TextView
             android:id="@+id/textView2"
@@ -34,7 +35,7 @@
             android:layout_alignStart="@+id/c3"
             android:layout_below="@+id/c3"
             android:ems="10"
-            android:hint="S5"
+            android:hint="Sem 5"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -47,7 +48,7 @@
             android:layout_alignStart="@+id/c4"
             android:layout_below="@+id/c4"
             android:ems="10"
-            android:hint="S6"
+            android:hint="Sem 6"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -60,7 +61,7 @@
             android:layout_alignStart="@+id/c5"
             android:layout_below="@+id/c6"
             android:ems="10"
-            android:hint="S8"
+            android:hint="Sem 8"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -73,7 +74,7 @@
             android:layout_alignStart="@+id/c5"
             android:layout_below="@+id/c5"
             android:ems="10"
-            android:hint="S7"
+            android:hint="Sem 7"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -86,7 +87,7 @@
             android:layout_alignStart="@+id/c1"
             android:layout_below="@+id/c1"
             android:ems="10"
-            android:hint="S3"
+            android:hint="Sem 3"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -99,7 +100,7 @@
             android:layout_alignStart="@+id/textView2"
             android:layout_below="@+id/textView2"
             android:ems="10"
-            android:hint="S1S2"
+            android:hint="Year 1"
             android:inputType="numberDecimal">
 
             <requestFocus />
@@ -115,7 +116,7 @@
             android:layout_alignStart="@+id/c2"
             android:layout_below="@+id/c2"
             android:ems="10"
-            android:hint="S4"
+            android:hint="Sem 4"
             android:inputType="numberDecimal"></EditText>
 
         <Button
@@ -125,7 +126,7 @@
             android:layout_below="@+id/c7"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
             android:text="FIND"
             android:textColor="#ffffff"
             android:textSize="16dp"

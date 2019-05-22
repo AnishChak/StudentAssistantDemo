@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:padding="20dp"
         android:orientation="vertical"
-        android:background="#ffffff"
+        android:background="@drawable/bgt"
         android:elevation="5dp"
         android:layout_height="match_parent">
 
@@ -28,28 +28,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="20"
+            android:gravity="center_horizontal"
             android:inputType="textPersonName"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="Login" />
+            android:text="Teacher Login"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/login_tid"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="UserName"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Teacher ID"
             android:paddingBottom="5dp"
-            android:textSize="20sp" />
+
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/login_tpassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingBottom="5dp"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
 
@@ -71,7 +78,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="50dp"
-            android:text="Register" />
+            android:text="Register"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </RelativeLayout>

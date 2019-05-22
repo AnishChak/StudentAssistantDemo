@@ -62,7 +62,7 @@ public class CreateScheduleActivity extends AppCompatActivity {
         String classSelected = classSelect.getSelectedItem().toString();
         EditText editText = (EditText) findViewById(R.id.subjectName);
         String subject = editText.getText().toString();
-        if (subject.length() < 2) {
+        if (subject.length() < 1) {
             Toast.makeText(getBaseContext(), "Enter Valid Subject Name", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -73,7 +73,8 @@ public class CreateScheduleActivity extends AppCompatActivity {
         String sql = "INSERT INTO SCHEDULE VALUES('" + classSelected + "'," +
                 "'" + subject + "'," +
                 "'" + hour + ":" + min + "'," +
-                "'" + daySelected + "');";
+                "'" + daySelected + "',"+
+                "'" + AppBase.id + "');";
         Log.d("Schedule", sql);
         if (AppBase.handler.execAction(sql)) {
             Toast.makeText(getBaseContext(), "Scheduling Done", Toast.LENGTH_LONG).show();

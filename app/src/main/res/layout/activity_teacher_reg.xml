@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:padding="20dp"
         android:orientation="vertical"
-        android:background="#ffffff"
+        android:background="@drawable/bgt"
         android:elevation="5dp"
         android:layout_height="match_parent">
 
@@ -24,49 +24,63 @@
             <!--android:textSize="20sp"-->
             <!--android:paddingBottom="5dp" />-->
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
             android:id="@+id/edit_t_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
             android:hint="Name"
-            android:textSize="20sp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
             android:id="@+id/t_id"
-            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
             android:hint="Teacher ID"
-            android:textSize="20sp"
-            android:paddingBottom="5dp" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:paddingBottom="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/t_dept"
-            android:hint="Department"
-            android:textSize="20sp"
-            android:paddingBottom="5dp" />
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="bottom"
+            android:paddingBottom="5dp"
+            android:text="CSE"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <EditText
             android:id="@+id/t_contact"
-            android:inputType="phone"
-            android:hint="Contact"
-            android:textSize="20sp"
-            android:paddingBottom="5dp" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/treg_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Password"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:textColor="#FFFFFF" />
 
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="SAVE"
+            android:text="REGISTER"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="16dp"

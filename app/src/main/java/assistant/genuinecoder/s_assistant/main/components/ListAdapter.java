@@ -75,6 +75,7 @@ public class ListAdapter extends BaseAdapter {
             else sts = 0;
             String qu = "INSERT INTO ATTENDANCE VALUES('" + AttendanceActivity.time + "'," +
                     "" + AttendanceActivity.period + "," +
+                    "'" + AttendanceActivity.sub + "'," +
                     "'" + registers.get(i) + "'," +
                     "" + sts + ");";
             AppBase.handler.execAction(qu);

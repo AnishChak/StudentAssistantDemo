@@ -98,6 +98,7 @@ public class GridAdapter extends BaseAdapter {
         TextView textView = (TextView) v.findViewById(R.id.namePlacer);
         ImageView imageView = (ImageView) v.findViewById(R.id.imageHolder);
         if (names.get(position).toString().equals("ATTENDANCE")) {
+            imageView.setBackgroundColor(0);
             imageView.setImageResource(R.drawable.ic_attendance);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override

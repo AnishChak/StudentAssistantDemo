@@ -24,10 +24,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorPrimary"
         android:textSize="18dp"
         android:gravity="center"
-        android:text="Developed By:-\thegenuinecoder@gmail.com"
+        android:text="Attendance APP \n\n
+        Mobile Application Development Project \n\n
+        Developed By :\n
+        Anish Chakraborty 10900115014\n
+        Arpan Mukherjee 10900115021\n
+        Biswadeep Banerjee 109001150127\n
+  CSE\n\n
+        Under the Guidance of :\n
+        Mr. Arnab Chakraborty."
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

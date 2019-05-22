@@ -57,7 +57,7 @@ public class Scheduler extends AppCompatActivity implements AdapterView.OnItemLo
     private void loadSchedules() {
         subs.clear();
         times.clear();
-        String qu = "SELECT * FROM SCHEDULE ORDER BY subject";
+        String qu = "SELECT * FROM SCHEDULE WHERE teacher_id ="+AppBase.id+" ORDER BY subject";
         Cursor cursor = AppBase.handler.execQuery(qu);
         if (cursor == null || cursor.getCount() == 0) {
             Toast.makeText(getBaseContext(), "No Schedules Available", Toast.LENGTH_LONG).show();
@@ -65,12 +65,12 @@ public class Scheduler extends AppCompatActivity implements AdapterView.OnItemLo
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
                 subx.add(cursor.getString(1));
-                subs.add(cursor.getString(1) + "\nfor " + cursor.getString(0) + "\nat " + cursor.getString(2) + " : " + cursor.getString(3));
+                subs.add(cursor.getString(0) + "\nfor Section " + cursor.getString(1 ) + "\nat " + cursor.getString(2) + " : " + cursor.getString(3));
                 times.add(cursor.getString(2));
                 cursor.moveToNext();
             }
         }
-        ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1, subs);
+        ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.list,R.id.textView3, subs);
         listView.setAdapter(adapter);
     }
 

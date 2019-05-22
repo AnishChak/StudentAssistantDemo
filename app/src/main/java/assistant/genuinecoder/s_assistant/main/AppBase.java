@@ -28,6 +28,7 @@ public class AppBase extends AppCompatActivity {
     public static ArrayList<String> divisions;
     public static DatabaseHandler handler;
     public static Activity activity;
+    public static String id;
     ArrayList<String> basicFields;
     GridAdapter adapter;
     GridView gridView;
@@ -61,18 +62,21 @@ public class AppBase extends AppCompatActivity {
         basicFields.add("ATTENDANCE");
         basicFields.add("SCHEDULER");
 //        basicFields.add("NOTES");
-        basicFields.add("PROFILE");
+//        basicFields.add("PROFILE");
 //        basicFields.add("CGPA CALCULATOR");
         adapter = new GridAdapter(this, basicFields);
         gridView.setAdapter(adapter);
 
         Intent intent = getIntent();
         String name = intent.getExtras().getString("name");
-        String id = intent.getExtras().getString("id");
+        id = intent.getExtras().getString("id");
+        String te = intent.getExtras().getString("email");
         TextView tn = (TextView)findViewById(R.id.display_tname);
         TextView tid = (TextView)findViewById(R.id.display_tid);
+        TextView temail = (TextView)findViewById(R.id.display_temail);
         tn.setText(name);
         tid.setText(id);
+        temail.setText(te);
 
         Button btn = (Button)findViewById(R.id.btn_tlogout);
         btn.setOnClickListener(new View.OnClickListener() {

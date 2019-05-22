@@ -64,6 +64,12 @@ public class LaunchActivity extends AppCompatActivity {
                         Intent intent = new Intent(LaunchActivity.this,TeacherLogin.class);
                         startActivity(intent);
                     }
+                    else if(parent.getItemAtPosition(position).equals("Student"))
+                    {
+
+                        Intent intent = new Intent(LaunchActivity.this,StudLogin.class);
+                        startActivity(intent);
+                    }
                     //anything else you want to do on item selection do here
                 }
             }
